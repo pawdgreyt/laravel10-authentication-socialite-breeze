@@ -1,4 +1,4 @@
-# Laravel 10 GitHub Login Authentication using Socialite and Breeze
+# Laravel 10 GitHub and Google Login Authentication using Socialite and Breeze
 
 This project demonstrates how to implement GitHub and Google authentication in a Laravel 10 application using Laravel Socialite and Breeze.
 
