@@ -1,6 +1,6 @@
 # Laravel 10 GitHub Login Authentication using Socialite and Breeze
 
-This project demonstrates how to implement GitHub authentication in a Laravel 10 application using Laravel Socialite and Breeze.
+This project demonstrates how to implement GitHub and Google authentication in a Laravel 10 application using Laravel Socialite and Breeze.
 
 ## Prerequisites
 
@@ -27,6 +27,10 @@ cp .env.example .env
 GITHUB_CLIENT_ID=your-github-client-id
 GITHUB_CLIENT_SECRET=your-github-client-secret
 GITHUB_CALLBACK_URL=http://your-app-url/login/github/callback
+
+GOOGLE_CLIENT_ID=your-github-client-id
+GOOGLE_CLIENT_SECRET=your-github-client-secret
+GOOGLE_CALLBACK_URL=http://your-app-url/login/google/callback
 ```
 4. Run the migration to set up the database:
 
