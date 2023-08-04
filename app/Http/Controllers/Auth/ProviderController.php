@@ -20,8 +20,8 @@ class ProviderController extends Controller
         try {
             $user = Socialite::driver($provider)->user();
 
-            if (User::where('email', $user->getEmail())->exists()) {
-                return redirect('/login')->withErrors(['email' => 'This email uses different platform to login']);
+            if (User::where('email', $user->getEmail())->where('auth_type', '!=', $provider)->exists()) {
+                return redirect('/login')->withErrors(['email' => 'This email uses a different platform to login']);
             }
 
             $providerUser = User::updateOrCreate([
