@@ -3,11 +3,17 @@
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
     <div class="text-center">
-        <a href="{{ route('github.login') }}">
+        <a href="/auth/github/redirect" style="display: inline-block;">
             <img src="https://icon-library.com/images/github-icon-svg/github-icon-svg-17.jpg" 
             alt="Github Icon"
             width="50px"
             class="mx-auto scale-100 hover:scale-125 ease-in duration-200">
+        </a>
+        <a href="/auth/google/redirect" style="display: inline-block;">
+            <img src="https://icon-library.com/images/free-google-icon/free-google-icon-17.jpg" 
+            alt="Google Icon"
+            width="50px"
+            class="mx-auto scale-100 hover:scale-125 ease-in duration-200 ml-4">
         </a>
     </div>
 

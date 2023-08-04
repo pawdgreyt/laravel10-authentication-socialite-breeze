@@ -22,7 +22,8 @@ class User extends Authenticatable
         'nickname',
         'email',
         'password',
-        'github_id',
+        'provider_id',
+        'provider_token',
         'auth_type',
     ];
 

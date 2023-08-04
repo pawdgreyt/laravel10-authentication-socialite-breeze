@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GithubController;
+use App\Http\Controllers\Auth\ProviderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('auth/github', [GithubController::class, 'redirect'])->name('github.login');
-Route::get('auth/github/callback', [GithubController::class, 'callback']);
+Route::get('auth/{provider}/redirect', [ProviderController::class, 'redirect']);
+Route::get('auth/{provider}/callback', [ProviderController::class, 'callback']);
 
 require __DIR__.'/auth.php';
